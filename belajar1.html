@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- belajar vue.js -->
+        <h1>Belajar Vue.js</h1>
+
+        <!-- data and methods -->
+        <h2>Data and Methods</h2>
+        <a> {{ greet('Evening') }} </a>
+        <a> Power : {{ power(10) }} </a>
+
+        <!-- data binding -->
+        <h2>Data Binding</h2>
+        <a v-bind:href="website">Google</a>
+        <a v-html="websiteTags"></a>
+        <input type="text" :value="age"/>
+
+        <!-- events -->
+        <h2>Events</h2>
+        <button v-on:click="add(1)" >Add a year</button>
+        <button @click="substract(1)">Subtract a year</button>
+        <button v-on:dblclick="add(10)" >Add 10 year</button>
+        <button @dblclick="substract(10)">Subtract 10 year</button>
+        <p>My age is {{ age }}</p>
+        <div id="canvas" v-on:mousemove="updateXY"> {{x}}, {{y}} </div>
+
+        <!-- events modifier -->
+        <h2>Events Modifier</h2>
+        <button v-on:click.once="add(1)" >Add a year (Only work once)</button>
+        <p>My age is {{ age }}</p>
+        <a v-on:click.prevent="click" href="http://www.google.com/">Google</a>
+
+    </div>
+    <script src="apps.js"></script>
+</body>
+</html>
