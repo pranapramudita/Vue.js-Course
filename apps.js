@@ -4,10 +4,14 @@ var app = new Vue({
         // data and methods
         name: 'Prana',
         age: 20,
-        website: 'http://www.google.com/',
-        websiteTags: '<a href=http://www.google.com/>Google</a>',
+        website: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa',
+        websiteTags: '<a href=https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa>Vue JS 2 Tutorial</a>',
         x: 0,
         y: 0,
+        a: 0,
+        b: 0,
+        green: false,
+        red: true,
     },
     methods: {
         // data and methods
@@ -25,16 +29,49 @@ var app = new Vue({
         substract: function(dec){
             this.age -= dec
         },
-
         updateXY: function(event){
             console.log(event)
             this.x = event.offsetX
             this.y = event.offsetY
         },
 
+        // events modifier 
         click: function(){
             alert('You clicked me')
         },
         
+        // keyboard events
+        logName: function(){
+            console.log('You entered your name')
+        },
+        logAge: function(){
+            console.log('You entered your age')
+        },
+    },
+    computed: {
+        // Computed Properties
+        addToA: function(){
+            console.log('addToA')
+            return this.a + this.age
+        },
+        addToB: function(){
+            console.log('addToB')
+            return this.b + this.age
+        },
+        compClasses: function(){
+            return{
+                green: this.green,
+                red: this.red
+            }
+        },
+
+        // Dynamic CSS Classes
+        colorFunc: function(){
+            if(this.green){
+                return 'red'
+            }else{
+                return 'green'
+            }
+        }
     },
 })

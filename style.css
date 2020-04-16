@@ -4,3 +4,11 @@
     text-align: center;
     border: 1px solid #333;
 }
+
+.green span{
+    background: green;
+}
+
+.red span{
+    background: red;
+}
