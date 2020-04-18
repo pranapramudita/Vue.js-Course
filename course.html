@@ -12,14 +12,12 @@
         <!-- belajar vue.js -->
         <h1>Belajar Vue.js</h1>
 
-        <!-- Computed Properties -->
-        <h2>Computed Properties</h2>
-        <button v-on:click="a++">Add to A</button>
-        <button v-on:click="b++">Add to B</button>
-        <p>A - {{ a }} </p>
-        <p>B - {{ b }} </p>
-        <p>Age + A = {{ addToA }} </p>
-        <p>Age + B = {{ addToB }} </p>
+        <!-- Dynamic CSS Classes -->
+        <h2>Dynamic CSS Classes</h2>
+        <button v-on:click="red = !red, green = !green">Toggle {{ colorFunc }}</button>
+        <div v-bind:class="compClasses">
+            <span>Lampu</span>
+        </div>
 
     </div>
     <script src="apps.js"></script>
