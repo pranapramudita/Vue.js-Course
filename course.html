@@ -12,10 +12,12 @@
         <!-- belajar vue.js -->
         <h1>Belajar Vue.js</h1>
 
-        <!-- data and methods -->
-        <h2>Data and Methods</h2>
-        <a> {{ greet('Evening') }} </a>
-        <a> Power : {{ power(10) }} </a>
+        <!-- data binding -->
+        <h2>Data Binding</h2>
+        <a v-bind:href="website">Vue JS 2 Tutorial</a>
+        <a v-html="websiteTags"></a>
+        <input type="text" :value="age"/>
+        <button v-on:click="age++">Add age</button>
 
     </div>
     <script src="apps.js"></script>
