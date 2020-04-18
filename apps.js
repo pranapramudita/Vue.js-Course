@@ -2,7 +2,20 @@ var app = new Vue({
     el: '#app',
     data: {
         age: 20,
-        website: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa',
-        websiteTags: '<a href=https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa>Vue JS 2 Tutorial</a>',
+        x: 0,
+        y: 0,
+    },
+    methods: {
+        add: function(inc){
+            this.age += inc
+        },
+        substract: function(dec){
+            this.age -= dec
+        },
+        updateXY: function(event){
+            console.log(event)
+            this.x = event.offsetX
+            this.y = event.offsetY
+        },
     },
 })
