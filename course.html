@@ -12,25 +12,8 @@
         <!-- belajar vue.js -->
         <h1>Belajar Vue.js</h1>
 
-        <!-- Looping with v-for -->
-        <h2>Looping with v-for</h2>
-        
-        <!-- <ul>
-            <li v-for="(character, index) in characters">{{ index }}. {{ character }}</li>
-        </ul>
-        <ul>
-            <li v-for="(ninja, index) in ninjas">{{ index }}. {{ ninja.name }} - {{ ninja.age }}</li>
-        </ul>
-        <template v-for="(ninja, index) in ninjas">
-            <h3>{{ index }}. {{ ninja.name }}</h3>
-            <p>{{ ninja.age }}</p>
-        </template> -->
-
-        <template v-for="(ninja, index) in ninjas">
-            <div v-for="(val, key) in ninja">
-                <p>{{ index }}. {{ key.charAt(0).toUpperCase() + key.slice(1) }} : {{ val }}</p>
-            </div>
-        </template>
+        <!-- Simple Punchbag Game -->
+        <h2>Simple Punchbag Game</h2>
 
     </div>
     <script src="apps.js"></script>
