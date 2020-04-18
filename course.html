@@ -12,12 +12,11 @@
         <!-- belajar vue.js -->
         <h1>Belajar Vue.js</h1>
 
-        <!-- data binding -->
-        <h2>Data Binding</h2>
-        <a v-bind:href="website">Vue JS 2 Tutorial</a>
-        <a v-html="websiteTags"></a>
-        <input type="text" :value="age"/>
-        <button v-on:click="age++">Add age</button>
+        <!-- events modifier -->
+        <h2>Events Modifier</h2>
+        <button v-on:click.once="add(1)" >Add a year (Only work once)</button>
+        <p>My age is {{ age }}</p>
+        <a v-on:click.prevent="click" href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa">Vue JS 2 Tutorial</a>
 
     </div>
     <script src="apps.js"></script>
