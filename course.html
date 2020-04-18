@@ -12,12 +12,14 @@
         <!-- belajar vue.js -->
         <h1>Belajar Vue.js</h1>
 
-        <!-- Dynamic CSS Classes -->
-        <h2>Dynamic CSS Classes</h2>
-        <button v-on:click="red = !red, green = !green">Toggle {{ colorFunc }}</button>
-        <div v-bind:class="compClasses">
-            <span>Lampu</span>
-        </div>
+        <!-- Conditionals -->
+        <h2>Conditionals</h2>
+        <button v-on:click="error = !error" >Toggle Error</button>
+        <button v-on:click="success = !success" >Toggle Success</button>
+        <!-- <p v-if="error">There has been an error</p>
+        <p v-else-if="success">There has been an success</p> -->
+        <p v-show="error">There has been an error</p>
+        <p v-show="success">There has been an success</p>
 
     </div>
     <script src="apps.js"></script>
