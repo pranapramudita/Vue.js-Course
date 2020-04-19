@@ -11,11 +11,16 @@
     <!-- belajar vue.js -->
     <h1>Belajar Vue.js</h1>
 
-    <!--  -->
-    <h2></h2>
+    <!-- Refs -->
+    <h2>Refs</h2>
 
     <div id="app">
-
+        <p>Your favorite food is: {{ favFood }}</p>
+        <span>Input Sendiri: </span>
+        <input type="text" ref="inputFood">
+        <button v-on:click="readRefsFood">Submit</button>
+        <div ref="choiceFood">Nasi</div>
+        <button v-on:click="readRefsChoiceFood">Pilih</button>
     </div>
     
     <script src="apps.js"></script>
