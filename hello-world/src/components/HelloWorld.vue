@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>Selamat pagi, {{ nama }}</p>
+    <p>{{ greeting(nama) }}</p>
     <a href="">Click aku click aku</a>
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
   data() {
     return {
       nama: 'Prana'
+    }
+  },
+  methods: {
+    greeting: function(name){
+      return "Selamat pagi, "+name
     }
   },
 }
