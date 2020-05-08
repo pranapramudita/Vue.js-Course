@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ title }}</h1>
+    <li>
+      <ul v-for="(ninja, index) in ninjas" :key="index">{{ index+1 }}. {{ ninja }}</ul>
+    </li>
   </div>
 </template>
 
@@ -8,7 +11,8 @@
 export default {
   data() {
     return {
-      title: 'Nesting Components',
+      title: 'Ninjas.vue',
+      ninjas: ['Tinja', 'Ryuja', 'Syuja']
     }
   }
 }
