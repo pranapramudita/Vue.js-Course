@@ -1,41 +1,37 @@
 <template>
   <div>
-    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
-    <app-body v-bind:foods="foods"></app-body>
-    <!-- <hr>
-    <app-body v-bind:foods="foods"></app-body> -->
-    <app-footer v-bind:title="title"></app-footer>
+    <form-helper>
+      <!-- <h2 slot="title"> {{ title }} </h2>
+      <p slot="paragraph">I am the paragraph for the slot</p> -->
+      <div slot="form-header">
+        <h3>Title of the form</h3>
+        <p>information about the form</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="name" required>
+        <input type="password" placeholder="password" required>
+      </div>
+      <div slot="form-controls">
+        <button v-on:click="handle">Submit</button>
+      </div>
+    </form-helper>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Body from './components/Body'
-import Footer from './components/Footer'
+import formHelper from './components/formHelper'
 
 export default {
-  components: {
-    'app-header': Header,
-    'app-body': Body,
-    'app-footer': Footer,
+  components:{
+    'form-helper': formHelper
   },
   data() {
     return {
-        foods: [
-            {name: 'Bakso', Deskripsi: 'Enak', show:false},
-            {name: 'Gorengan', Deskripsi: 'Enak', show:false},
-            {name: 'Nasi Goreng', Deskripsi: 'Enak', show:false},
-            {name: 'Bubur Ayam', Deskripsi: 'Enak', show:false},
-            {name: 'Bebek Goreng', Deskripsi: 'Enak', show:false},
-            {name: 'Ayam Bakar', Deskripsi: 'Enak', show:false},
-        ],
-        title: "Warung Makan Prana"
+      title: 'I am a dynamic slot title'
     }
   },
   methods: {
-    updateTitle: function(updatedTitle){
-      this.title = updatedTitle
-    }
+    
   },
 }
 </script>
