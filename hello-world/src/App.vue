@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <app-body v-bind:foods="foods"></app-body>
     <!-- <hr>
     <app-body v-bind:foods="foods"></app-body> -->
@@ -30,6 +30,11 @@ export default {
             {name: 'Ayam Bakar', Deskripsi: 'Enak', show:false},
         ],
         title: "Warung Makan Prana"
+    }
+  },
+  methods: {
+    updateTitle: function(updatedTitle){
+      this.title = updatedTitle
     }
   },
 }

@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         changeTitle: function(){
-            this.title = "Warung Makan Dika?"
+            this.$emit('changeTitle', 'Warung Makan Dika?')
         }
     },
 }
