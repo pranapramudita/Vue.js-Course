@@ -1,7 +1,7 @@
 <template>
   <div>
     <add-blog>
-      
+
     </add-blog>
   </div>
 </template>
@@ -17,5 +17,7 @@ export default {
 </script>
 
 <style>
-
+body{
+  font-family: Roboto;
+}
 </style>
