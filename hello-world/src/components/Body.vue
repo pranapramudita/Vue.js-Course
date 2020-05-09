@@ -20,7 +20,27 @@ export default {
     methods: {
         deleteFoods: function(){
             this.foods.pop()
+            this.foods != 1
         }
+    },
+    // life-cycle hooks
+    beforeCreate() {
+        alert('beforeCreate')
+    },
+    created() {
+        alert('created')
+    },
+    beforeMount() {
+        alert('beforeMount')
+    },
+    mounted() {
+        alert('mounted')
+    },
+    beforeUpdate() {
+        alert('beforeUpdate')
+    },
+    updated() {
+        alert('updated')
     },
 }
 </script>
