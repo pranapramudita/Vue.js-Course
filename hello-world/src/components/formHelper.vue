@@ -1,8 +1,5 @@
 <template>
   <div>
-      <!-- <slot name="title"></slot>
-      <h1>This is just form helper</h1>
-      <slot name="paragraph"></slot> -->
     <h1>Please fill out the form</h1>
     <form>
         <div id="form-header">
@@ -23,23 +20,11 @@
             </ul>
         </div>
     </form>
-  
   </div>
 </template>
 
 <script>
 export default {
-    components:{
-
-    },
-    data() {
-        return {
-            
-        }
-    },
-    methods: {
-        
-    },
 }
 </script>
 
