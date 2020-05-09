@@ -7,13 +7,13 @@
           <label>Blog Content</label>
           <textarea v-model.lazy="blog.content"></textarea>
           <div id="checkbox">
-              <label for="">Hiburan</label>
+              <label>Hiburan</label>
               <input type="checkbox" value="Hiburan" v-model="blog.categories">
-              <label for="">Politik</label>
+              <label>Politik</label>
               <input type="checkbox" value="Politik" v-model="blog.categories">
-              <label for="">Kuliner</label>
+              <label>Kuliner</label>
               <input type="checkbox" value="Kuliner" v-model="blog.categories">
-              <label for="">Liburan</label>
+              <label>Liburan</label>
               <input type="checkbox" value="Liburan" v-model="blog.categories">
           </div>
           <label>Author:</label>
@@ -85,6 +85,4 @@ h3{
 #checkbox label{
     display: inline-block;
 }
-
-
 </style>
