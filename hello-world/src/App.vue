@@ -1,30 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld></HelloWorld>
-    <Ninja></Ninja>
+  <div>
+    <app-header></app-header>
+    <app-body></app-body>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Ninja from './components/Ninja.vue'
+import Header from './components/Header'
+import Body from './components/Body'
+import Footer from './components/Footer'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld, Ninja
+    'app-header': Header,
+    'app-body': Body,
+    'app-footer': Footer,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
