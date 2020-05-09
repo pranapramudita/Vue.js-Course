@@ -6,8 +6,6 @@
 
 <script>
 export default {
-  components: {
-  },
   data() {
       return {
           copyright: 'Copyright 2020 Prana Pramudita K'

@@ -6,8 +6,6 @@
 
 <script>
 export default {
-  components: {
-  },
   data() {
       return {
           title: 'Warung Makan Prana'

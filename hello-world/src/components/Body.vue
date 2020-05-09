@@ -11,18 +11,14 @@
 
 <script>
 export default {
-    data() {
-        return {
-            foods: [
-                {name: 'Bakso', Deskripsi: 'Enak', show:false},
-                {name: 'Gorengan', Deskripsi: 'Enak', show:false},
-                {name: 'Nasi Goreng', Deskripsi: 'Enak', show:false},
-                {name: 'Bubur Ayam', Deskripsi: 'Enak', show:false},
-                {name: 'Bebek Goreng', Deskripsi: 'Enak', show:false},
-                {name: 'Ayam Bakar', Deskripsi: 'Enak', show:false},
-            ]
-        }
-    },
+    props: ['foods'],
+    // or could be like this 
+    // props: {
+    //     foods:{
+    //         type: Array,
+    //         required: true,
+    //     }
+    // }
 }
 </script>
 
