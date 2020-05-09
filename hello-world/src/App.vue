@@ -1,8 +1,10 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-body v-bind:foods="foods"></app-body>
-    <app-footer></app-footer>
+    <!-- <hr>
+    <app-body v-bind:foods="foods"></app-body> -->
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -26,7 +28,8 @@ export default {
             {name: 'Bubur Ayam', Deskripsi: 'Enak', show:false},
             {name: 'Bebek Goreng', Deskripsi: 'Enak', show:false},
             {name: 'Ayam Bakar', Deskripsi: 'Enak', show:false},
-        ]
+        ],
+        title: "Warung Makan Prana"
     }
   },
 }

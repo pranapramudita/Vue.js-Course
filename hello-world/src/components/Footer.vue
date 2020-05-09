@@ -1,16 +1,21 @@
 <template>
   <footer>
-      <p>{{ copyright }}</p>
+      <p>{{ copyright }}  {{ title }}</p>
   </footer>
 </template>
 
 <script>
 export default {
-  data() {
-      return {
-          copyright: 'Copyright 2020 Prana Pramudita K'
-      }
-  },
+    props:{
+        title:{
+            type: Array,
+        }
+    },
+    data() {
+        return {
+            copyright: 'Copyright 2020'
+        }
+    },
 }
 </script>
 

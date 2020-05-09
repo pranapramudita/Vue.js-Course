@@ -1,16 +1,21 @@
 <template>
   <header>
-      <h1>{{ title }}</h1>
+      <h1 v-on:click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
 <script>
 export default {
-  data() {
-      return {
-          title: 'Warung Makan Prana'
-      }
-  },
+    props:{
+        title:{
+            type: Array,
+        }
+    },
+    methods: {
+        changeTitle: function(){
+            this.title = "Warung Makan Dika?"
+        }
+    },
 }
 </script>
 

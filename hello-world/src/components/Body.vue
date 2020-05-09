@@ -6,19 +6,22 @@
                 <h3 v-if="food.show">{{ food.Deskripsi }}</h3>
             </li>
         </ul>
+        <button v-on:click="deleteFoods">Delete Foods</button>
     </body>
 </template>
 
 <script>
 export default {
-    props: ['foods'],
-    // or could be like this 
-    // props: {
-    //     foods:{
-    //         type: Array,
-    //         required: true,
-    //     }
-    // }
+    props: {
+        foods:{
+            type: Array,
+        }
+    },
+    methods: {
+        deleteFoods: function(){
+            this.foods.pop()
+        }
+    },
 }
 </script>
 
