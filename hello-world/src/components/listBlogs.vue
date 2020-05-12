@@ -1,6 +1,7 @@
 <template>
   <div id="show-blogs">
       <h1>All Blog List</h1>
+      <router-link to="/blog:id"></router-link>
       <input type="text" v-model="search" placeholder="search title blogs">
       <div v-for="(blog, index) in filteredBlogs" :key="index" class="single-blog">
           <h3 v-rainbow>{{ blog.title | to-uppercase }}</h3>
@@ -19,7 +20,7 @@ export default {
          }
      },
      methods: {
-         
+
      },
      created() {
          this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function(data){
